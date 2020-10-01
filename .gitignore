@@ -1,0 +1,7 @@
+*_credentials*
+stage.env
+prod.env
+.terraform
+id_rsa*
+terraform.*
+!terraform.tfvars
