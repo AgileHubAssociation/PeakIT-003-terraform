@@ -35,3 +35,9 @@ RUN tar zxf /opt/google-cloud-sdk-${GCLOUD_VERSION}-linux-x86_64.tar.gz -C /opt 
 ADD https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip /usr/bin/
 RUN unzip /usr/bin/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin \
     && rm -f /usr/bin/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+
+# SSH setup
+COPY .ssh/${INFRA}/id_rsa /root/.ssh/id_rsa
+COPY .ssh/${INFRA}/id_rsa.pub /root/.ssh/id_rsa.pub
+
+RUN chmod 600 /root/.ssh/id_rsa
