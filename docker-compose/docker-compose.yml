@@ -15,4 +15,4 @@ services:
     env_file: 
       - aws_credentials.env
       - gcp.env
-    command: ["/bin/bash"]
+    entrypoint: /project/entrypoint.sh

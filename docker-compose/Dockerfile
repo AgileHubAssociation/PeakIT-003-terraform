@@ -10,6 +10,7 @@ ARG GCLOUD_VERSION
 # Add repo modules
 RUN apk add --no-cache \
     python3 \
+    py3-pip \
     ca-certificates \
     bash \
     openssh \
