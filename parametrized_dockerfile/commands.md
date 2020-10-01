@@ -1,0 +1,2 @@
+* docker build --build-arg TERRAFORM_VERSION=0.12.20 --build-arg GCLOUD_VERSION=307.0.0 --tag parametrized_infra .
+* docker build --build-arg TERRAFORM_VERSION=0.12.20 --build-arg GCLOUD_VERSION=312.0.0 --tag parametrized_infra .
