@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  aws-infra:
+    container_name: aws-infra
+    image: aws-infra
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TERRAFORM_VERSION: ${TERRAFORM_VERSION}
+        GCLOUD_VERSION: ${GCLOUD_VERSION}
+    volumes:
+      - .:/project
+    env_file: 
+      - aws_credentials.env
+      - gcp.env
+    entrypoint: /project/entrypoint.sh
