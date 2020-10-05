@@ -6,16 +6,12 @@ variable "sa_terraform" {
   type = string
 }
 
-variable "gcp_region" {
-  type = string
-}
-
 variable "gcp_project_id" {
   type = string
 }
 
-variable "gcp" {
-  type = bool
+variable "gcp_region" {
+  type = string
 }
 
 variable "aws_region" {

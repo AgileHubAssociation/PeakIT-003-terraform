@@ -9,11 +9,13 @@ provider "google" {
 provider "aws" {
   version = "3.8"
   region  = var.aws_region
+  # credentials are sourced from env variables
 }
 
 terraform {
   backend "gcs" {
     bucket = {}
+    prefix  = "5-network_modules_multi_cloud"
     #bucket     = "${var.state_bucket}"
   }
 }
