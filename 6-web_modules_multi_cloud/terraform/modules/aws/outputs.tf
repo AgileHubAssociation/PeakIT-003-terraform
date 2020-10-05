@@ -11,5 +11,5 @@ output "aws_nat_instance_public_ip" {
 }
 
 output "alb_dns_name" {
-  value = aws_alb.alb.0.dns_name
+  value = aws_alb.alb.*.dns_name
 }

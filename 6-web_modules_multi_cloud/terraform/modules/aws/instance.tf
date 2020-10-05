@@ -21,7 +21,7 @@ resource "aws_instance" "example" {
 }
 
 data "template_file" "cloud_init_tpl" {
-  template = "${file("${path.module}/templates/example.tpl")}"
+  template = file("${path.module}/templates/example.tpl")
 
   # vars = {
   #   name = value, even from tf

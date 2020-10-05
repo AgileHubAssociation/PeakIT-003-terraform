@@ -1,5 +1,6 @@
 
 resource "aws_instance" "bastion" {
+  count         = var.enabled ? 1 : 0
   ami           = var.instance_ami
   instance_type = var.instance_type
   subnet_id     = aws_subnet.subnet_pub.0.id

@@ -1,6 +1,6 @@
 module "aws" {
   source  = "./modules/aws"
-  enabled = true
+  enabled = false
 
   name             = var.name
   vpc_cidr         = var.vpc_cidr
@@ -17,9 +17,13 @@ module "aws" {
 
 module "gcp" {
   source  = "./modules/gcp"
-  enabled = false
+  enabled = true
 
-  name       = var.name
-  project_id = var.gcp_project_id
-
+  name             = var.name
+  project_id       = var.gcp_project_id
+  subnet_priv      = var.subnet_priv
+  subnet_pub       = var.subnet_pub
+  sg_whitelist_ssh = var.sg_whitelist_ssh
+  gcp_zones        = var.gcp_zones
+  compute_web      = var.compute_web
 }
