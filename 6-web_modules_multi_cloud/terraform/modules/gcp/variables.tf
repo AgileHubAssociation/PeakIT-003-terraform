@@ -2,6 +2,10 @@ variable "project_id" {
   type = string
 }
 
+variable "gcp_region" {
+  type = string
+}
+
 variable "name" {
   type = string
 }
@@ -28,4 +32,14 @@ variable "compute_web" {
 
 variable "gcp_zones" {
   type = string
+}
+
+variable "http_port" {
+  type    = number
+  default = 80
+}
+
+variable "http_port_name" {
+  type    = string
+  default = "web"
 }

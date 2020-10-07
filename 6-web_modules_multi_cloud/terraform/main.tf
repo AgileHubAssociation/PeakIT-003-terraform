@@ -21,6 +21,7 @@ module "gcp" {
 
   name             = var.name
   project_id       = var.gcp_project_id
+  gcp_region       = var.gcp_region
   subnet_priv      = var.subnet_priv
   subnet_pub       = var.subnet_pub
   sg_whitelist_ssh = var.sg_whitelist_ssh

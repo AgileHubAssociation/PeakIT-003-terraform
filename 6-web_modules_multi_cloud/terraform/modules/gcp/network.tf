@@ -24,12 +24,14 @@ resource "google_compute_subnetwork" "subnet_web" {
 }
 
 
-# resource "google_compute_address" "bastion_ip" {
-#   name         = "${var.name}-ip-bastion"
-#   address_type = "EXTERNAL"
-#   network_tier = "STANDARD"
-# }
+resource "google_compute_address" "bastion_ip" {
+  count        = var.enabled ? 1 : 0
+  name         = "${var.name}-ip-bastion"
+  address_type = "EXTERNAL"
+  network_tier = "STANDARD"
+}
 
-# resource "google_compute_global_address" "lb_ip" {
-#   name = "${var.name}-ip-lb"
-# }
+resource "google_compute_global_address" "lb_ip" {
+  count = var.enabled ? 1 : 0
+  name  = "${var.name}-ip-lb"
+}

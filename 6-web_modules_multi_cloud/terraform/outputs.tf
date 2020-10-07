@@ -13,3 +13,11 @@ output "aws_instance_private_ip" {
 output "aws_alb_dns_name" {
   value = module.aws.alb_dns_name
 }
+
+output "bastion_public_ip" {
+  value = module.gcp.bastion_public_ip
+}
+
+output "web_private_ip" {
+  value = module.gcp.web_private_ip
+}
