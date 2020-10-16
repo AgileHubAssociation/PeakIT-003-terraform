@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  aws-infra-cli:
-    container_name: aws-infra-cli
-    image: aws-infra-cli
+  infra:
+    container_name: infra
+    image: infra
     build:
       context: .
       dockerfile: Dockerfile

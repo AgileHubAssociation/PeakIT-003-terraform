@@ -1,6 +1,6 @@
 ### Running example
-* docker-compose build aws-infra
-* docker-compose run aws-infra
+* docker-compose build infra
+* docker-compose run infra
 
 ### Terraform
 * From AWS Account create an IAM User with no permissions

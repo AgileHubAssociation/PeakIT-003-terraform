@@ -4,6 +4,6 @@
 * docker run --rm -it --volume "$(pwd):/project" --name simple_infra simple_infra /bin/sh
 
 
-### Exercies
+### Exercises
 * Run with a different shell ( bash ) - "echo $0" to check shell
 * Run while mounting the sample directory in /project/mounted_sample
