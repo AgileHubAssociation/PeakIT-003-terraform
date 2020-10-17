@@ -3,7 +3,7 @@ version: '3.7'
 services:
   infra:
     container_name: infra
-    image: infra
+    image: infra5
     build:
       context: .
       dockerfile: Dockerfile
