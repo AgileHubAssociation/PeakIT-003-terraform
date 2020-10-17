@@ -37,8 +37,8 @@ resource "google_compute_http_health_check" "health_web" {
   name                = "${var.name}-health-web"
   port                = var.http_port
   request_path        = "/"
-  check_interval_sec  = 10
-  timeout_sec         = 5
+  check_interval_sec  = 5
+  timeout_sec         = 3
   unhealthy_threshold = 10
 }
 

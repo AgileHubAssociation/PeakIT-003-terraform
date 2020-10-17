@@ -43,3 +43,8 @@ variable "http_port_name" {
   type    = string
   default = "web"
 }
+
+variable "ssh_user" {
+  type    = string
+  default = "admin"
+}

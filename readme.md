@@ -7,6 +7,10 @@ This repository represents the whole infrastructure project for Peak IT 003's wo
 The repository is split into 6 different scenarios, each with it's own readme and purpose.
 Each scenario also contains the necessary commands in the "commands.tf" file.
 
+## ToC
+
+Presentation available in the "presentations" directory at the root of the repo.
+
 ### Start instructions
 
 The first steps are to enable to user/service account for each platform. For security reasons this should be enabled before starting work and disabled after.
