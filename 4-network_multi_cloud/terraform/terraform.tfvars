@@ -3,7 +3,7 @@ gcp_region = "europe-west1"
 gcp_project_id = "agilehub-gcp"
 
 # Control env from here
-gcp = false
+gcp = true
 
 aws_region = "eu-west-1"
 

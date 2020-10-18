@@ -12,6 +12,10 @@ EC2 Admin
 * Assign terraform user to it 
 * Create a bucket for storing state at some point
 
+### Check commands
+GCP
+gcloud compute regions list
+
 ### Running terraform 
 * cd to desired directory
 * terraform init

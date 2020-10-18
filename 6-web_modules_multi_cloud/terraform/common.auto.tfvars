@@ -19,6 +19,5 @@ subnet_priv = [
 ]
 
 sg_whitelist_ssh = [
-  "188.27.40.216/32",
   "0.0.0.0/0"
 ]

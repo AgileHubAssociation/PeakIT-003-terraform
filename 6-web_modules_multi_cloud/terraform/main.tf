@@ -1,6 +1,6 @@
 module "aws" {
   source  = "./modules/aws"
-  enabled = false
+  enabled = true
 
   name             = var.name
   vpc_cidr         = var.vpc_cidr
