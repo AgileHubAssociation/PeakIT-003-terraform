@@ -13,4 +13,8 @@ resource "aws_instance" "bastion" {
   tags = {
     Name = "${var.name}-bastion"
   }
+
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.bastion.0.private_ip} >> private_ips.txt"
+  }
 }

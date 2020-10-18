@@ -27,6 +27,19 @@ resource "google_compute_instance" "bastion" {
   }
 
   tags = ["bastion"]
+
+  provisioner "remote-exec" {
+    connection {
+      type        = "ssh"
+      user        = var.ssh_user
+      private_key = file("/project/.ssh/id_rsa")
+      host        = google_compute_address.bastion_ip.0.address
+    }
+
+    inline = [
+      "echo hi > /tmp/hello"
+    ]
+  }
 }
 
 resource "google_compute_instance" "web" {
