@@ -6,12 +6,19 @@ resource "google_compute_network" "network" {
 }
 
 resource "google_compute_subnetwork" "subnet_bastion" {
-  count                    = var.enabled ? 1 : 0
-  name                     = "${var.name}-subnet-bastion"
-  project                  = var.project_id
+  count   = var.enabled ? 1 : 0
+  name    = "${var.name}-subnet-bastion"
+  project = var.project_id
+
+  # Implicit dependency
   network                  = google_compute_network.network.0.self_link
   ip_cidr_range            = lookup(var.subnet_pub[0], "cidr")
   private_ip_google_access = true
+
+  # Explicit dependency
+  depends_on = [
+    google_compute_network.network
+  ]
 }
 
 resource "google_compute_subnetwork" "subnet_web" {
