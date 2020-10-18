@@ -16,6 +16,7 @@ module "aws" {
 }
 
 module "gcp" {
+  # This can be a git repo
   source  = "./modules/gcp"
   enabled = true
 
